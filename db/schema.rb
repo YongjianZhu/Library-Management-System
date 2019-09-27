@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_052649) do
+ActiveRecord::Schema.define(version: 2019_09_27_000141) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "isbn"
+    t.string "title"
+    t.string "language"
+    t.text "published"
+    t.integer "edition"
+    t.string "subject"
+    t.text "summary"
+    t.integer "special"
+    t.integer "university_id", null: false
+    t.integer "library_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["library_id"], name: "index_books_on_library_id"
+    t.index ["university_id"], name: "index_books_on_university_id"
+  end
 
   create_table "libraries", force: :cascade do |t|
     t.string "name"
@@ -29,5 +46,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_052649) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "books", "libraries"
+  add_foreign_key "books", "universities"
   add_foreign_key "libraries", "universities"
 end
