@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Librarybooklists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Number</th>
+      <th>Library</th>
+      <th>University</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @librarybooklists.each do |librarybooklist| %>
+      <tr>
+        <td><%= librarybooklist.book_id %></td>
+        <td><%= librarybooklist.number %></td>
+        <td><%= librarybooklist.library_id %></td>
+        <td><%= librarybooklist.university_id %></td>
+        <td><%= link_to 'Show', librarybooklist %></td>
+        <td><%= link_to 'Edit', edit_librarybooklist_path(librarybooklist) %></td>
+        <td><%= link_to 'Destroy', librarybooklist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Librarybooklist', new_librarybooklist_path %>
