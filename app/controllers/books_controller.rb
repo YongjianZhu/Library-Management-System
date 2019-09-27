@@ -26,6 +26,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
 
+
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
@@ -69,6 +70,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:isbn, :title, :language, :published, :edition, :subject, :summary, :special, :university_id, :library_id)
+      params.require(:book).permit(:isbn, :title, :language, :published, :edition, :subject, :summary, :special, :university_id, :library_id, :image)
     end
 end
