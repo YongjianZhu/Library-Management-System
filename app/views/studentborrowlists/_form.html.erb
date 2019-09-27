@@ -1,0 +1,32 @@
+<%= form_with(model: studentborrowlist, local: true) do |form| %>
+  <% if studentborrowlist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(studentborrowlist.errors.count, "error") %> prohibited this studentborrowlist from being saved:</h2>
+
+      <ul>
+        <% studentborrowlist.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= form.text_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duedate %>
+    <%= form.text_area :duedate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

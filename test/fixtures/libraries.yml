@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  university: one
+  location: MyString
+  max_borrowed_days: 1
+  overdue_fines: 1
+
+two:
+  name: MyString
+  university: two
+  location: MyString
+  max_borrowed_days: 1
+  overdue_fines: 1

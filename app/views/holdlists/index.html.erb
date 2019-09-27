@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Holdlists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>University</th>
+      <th>Book</th>
+      <th>Library</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @holdlists.each do |holdlist| %>
+      <tr>
+        <td><%= holdlist.student_id %></td>
+        <td><%= holdlist.university_id %></td>
+        <td><%= holdlist.book_id %></td>
+        <td><%= holdlist.library_id %></td>
+        <td><%= link_to 'Show', holdlist %></td>
+        <td><%= link_to 'Edit', edit_holdlist_path(holdlist) %></td>
+        <td><%= link_to 'Destroy', holdlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Holdlist', new_holdlist_path %>
