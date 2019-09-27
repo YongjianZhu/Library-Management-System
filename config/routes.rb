@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :students
   resources :wishlists
-  resources :students
   resources :books
   resources :libraries
   resources :universities
