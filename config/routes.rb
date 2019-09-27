@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :librarybooklists
+  resources :borrowhistories
+  resources :studentborrowlists
+  resources :holdlists
   resources :wishlists
   resources :students
   resources :books

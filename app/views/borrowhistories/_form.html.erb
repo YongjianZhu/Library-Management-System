@@ -1,0 +1,37 @@
+<%= form_with(model: borrowhistory, local: true) do |form| %>
+  <% if borrowhistory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(borrowhistory.errors.count, "error") %> prohibited this borrowhistory from being saved:</h2>
+
+      <ul>
+        <% borrowhistory.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :library_id %>
+    <%= form.text_field :library_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :university_id %>
+    <%= form.text_field :university_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= form.text_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
