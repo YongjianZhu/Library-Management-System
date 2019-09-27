@@ -9,7 +9,10 @@ gem 'rails', '~> 6.0.0'
 gem 'sqlite3', '~> 1.4'
 
 gem 'devise'
+<<<<<<< .merge_file_Rj2jnQ
 
+=======
+>>>>>>> .merge_file_hnEvrP
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

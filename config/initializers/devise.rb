@@ -8,9 +8,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< .merge_file_AuOIDy
   # config.secret_key = '95efe1ce99415c8a665a78562302dd50aaad8854a2bd075b64a6442637f6959ba666f7013f90331c47dd27536f0765313fa05c9b165c70c96b96bacb4b00d716'
 
   config.scoped_views = true
+=======
+  # config.secret_key = 'dde9e411bdec1203a17415032308a92c296aa9cf165aafd4a02f03d3a43013bb693c6da5a8e55ab24f41b951bed6322420e7ec0407d34a91d3b1d07859a1b77c'
+>>>>>>> .merge_file_qhgUft
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -116,7 +120,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
+<<<<<<< .merge_file_AuOIDy
   # config.pepper = '7f92a8889b6ff2af74bc1a7b5979ca40042080963d0aeb0bfd84910c9405f39946dbf00c199fdee032ce40b051ab1fc711b7a5b797fe6343b85b685a188eae3b'
+=======
+  # config.pepper = 'ea3e4f1b6255398341a3c85358fb132aebcdab77df5a68f4e3499ba6079d3dc4cdc9eefdce84c595ee4419d3b322640a009ded0e12d7d2e68210195a515cefcb'
+>>>>>>> .merge_file_qhgUft
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

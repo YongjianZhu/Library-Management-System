@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_064001) do
+<<<<<<< .merge_file_kJxvOM
+ActiveRecord::Schema.define(version: 2019_09_27_074819) do
+=======
+ActiveRecord::Schema.define(version: 2019_09_27_021801) do
+>>>>>>> .merge_file_55WZvp
 
   create_table "books", force: :cascade do |t|
     t.string "isbn"
@@ -41,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_09_27_064001) do
   end
 
   create_table "students", force: :cascade do |t|
+<<<<<<< .merge_file_kJxvOM
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -48,8 +53,23 @@ ActiveRecord::Schema.define(version: 2019_09_27_064001) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.integer "education_level"
+    t.integer "max_book_number"
+    t.integer "university_id"
     t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
+=======
+    t.string "email"
+    t.string "name"
+    t.string "password"
+    t.integer "education"
+    t.integer "university_id", null: false
+    t.integer "maximum"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+>>>>>>> .merge_file_55WZvp
+    t.index ["university_id"], name: "index_students_on_university_id"
   end
 
   create_table "universities", force: :cascade do |t|
@@ -58,6 +78,21 @@ ActiveRecord::Schema.define(version: 2019_09_27_064001) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+<<<<<<< .merge_file_kJxvOM
+=======
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+>>>>>>> .merge_file_55WZvp
   create_table "wishlists", force: :cascade do |t|
     t.integer "student_id", null: false
     t.integer "book_id", null: false
@@ -70,6 +105,7 @@ ActiveRecord::Schema.define(version: 2019_09_27_064001) do
   add_foreign_key "books", "libraries"
   add_foreign_key "books", "universities"
   add_foreign_key "libraries", "universities"
+  add_foreign_key "students", "universities"
   add_foreign_key "wishlists", "books"
   add_foreign_key "wishlists", "students"
 end

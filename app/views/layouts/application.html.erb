@@ -16,9 +16,12 @@
 <p class="alert"><%= alert %></p>
 <div class="container">
   <%= student_signed_in? %>
-  <%= current_student %>
-  <%= student_session %>
   <%= yield %>
+<<<<<<< .merge_file_PR6dTA
+  <%= link_to "logout", destroy_student_session_path, method: :delete %>
+=======
+  <%= link_to "logout", destroy_user_session_path, method: :delete %>
+>>>>>>> .merge_file_ElZY7i
 </div>
 </body>
 <%= render 'layouts/footer' %>
