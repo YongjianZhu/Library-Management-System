@@ -1,15 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background: rgb(245, 245, 245)">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <%= link_to"Library Management System",  root_path, class:"navbar-brand"%>
+    <%= link_to"Home",  root_path, class:"btn btn-light"%>
+    <%= link_to"University", universities_path, class:"btn btn-light" %>
+    <%= link_to"Library", libraries_path, class:"btn btn-light" %>
+    <%= link_to"Book", books_path, class:"btn btn-light" %>
+    <!--
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
@@ -33,5 +31,6 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
+    -->
   </div>
 </nav>
