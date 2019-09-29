@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 gem "paperclip", "~> 6.0.0"
-gem 'aws-sdk', '~>2.3'
+gem 'aws-sdk', '~> 3'
 gem 'rmagick'
 # Bundle edge Rails instheroku config:set S3_BUCKET_NAME=your_bucket_nameead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
