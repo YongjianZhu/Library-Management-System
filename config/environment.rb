@@ -14,3 +14,10 @@ ActionMailer::Base.smtp_settings = {
     :domain => 'heroku.com',
     :enable_starttls_auto => true
 }
+class Paperclip::Attachment
+  default_options.merge!(
+      storage: :s3,
+      url: ":s3_domain_url",
+      path: "/:class/:attachment/:id_partition/:style/:filename"
+  )
+end
