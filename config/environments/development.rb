@@ -16,7 +16,8 @@ Rails.application.configure do
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
-    config.action_controller.perform_caching = true
+    # changed to false
+    config.action_controller.perform_caching = false
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
@@ -53,7 +54,11 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-
+  # New added for S3 storing image
+  # Adds additional error checking when serving assets at runtime.
+  # Checks for improperly declared sprockets dependencies.
+  # Raises helpful error messages.
+  config.assets.raise_runtime_errors = true
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 
