@@ -1,6 +1,9 @@
 # Load the Rails application.
 require_relative 'application'
 
+config.gem "rmagick",
+           :lib => "RMagick"
+
 # Initialize the Rails application.
 Rails.application.initialize!
 
